@@ -1,0 +1,19 @@
+<!--<app-hello-world></app-hello-world>-->
+<nav>
+  <a routerLink="/userlist">Users</a>
+  <a routerLink="/dashboard">Dashboard</a>
+</nav>
+<router-outlet></router-outlet>
+<app-messages></app-messages>
+<form>
+  <h3>Add a Link</h3>
+  <div><label for="title">title : </label><input type="text" name="title" #newTitle></div>
+  <div><label for="link">link : </label><input type="text" name="link" #newLink></div>
+  <div><button type="button" (click)="addALink(newTitle,newLink)">submit link</button></div>
+</form>
+<h1>list of articles</h1>
+
+<app-article *ngFor="let article of articles" [newArticle]="article"></app-article>
+
+<h1>Product Listing</h1>
+<app-product-list></app-product-list>

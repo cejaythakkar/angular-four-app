@@ -1,0 +1,15 @@
+<div>
+  <div class="title">
+    <h4>{{article.title}}</h4>
+  </div>
+  <div class="link">
+    <span>{{article.votes}}</span>
+  </div>
+  <div class="link">
+    <span>{{article.link}}</span>
+  </div>
+  <div class="vote-buttons">
+    <button (click)="upVote()">vote up</button>
+    <button (click)="downVote()">vote down</button>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<h2>Example of working with an Array in Angular</h2>
+<div class="user-list">
+  <div><div><span>UI team</span></div>
+    <ul>
+      <li *ngFor="let uiMember of uiTeamMembers" routerLink="/detail/{{uiMember.id}}"><span>{{uiMember.name}}</span>
+        <app-user-item [user]="uiMember"></app-user-item>
+      </li>
+    </ul>
+  </div>
+  <!--<app-user-detail [user]="selectedUser"></app-user-detail>-->
+</div>

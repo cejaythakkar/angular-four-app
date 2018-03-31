@@ -1,0 +1,143 @@
+/* ----- navigation bar ----- */
+
+div.navigation-bar{
+    color : white;
+    position : fixed;
+    top : 0;
+    width : 100%;
+    z-index : 1;
+}
+
+div.navigation-bar div.navigation-container:after{
+    content:'';
+    clear: both;
+    display:block;
+}
+
+div.navigation-bar div.navigation-container{
+    margin:10px auto;
+    width:500px;
+}
+
+div.navigation-bar ul{
+    list-style:none;
+    margin : 0;
+    padding : 0;
+    
+}
+
+div.navigation-bar ul li{
+    float:left;
+    background-color: red;
+    opacity:0.6;
+    margin-right : 2px;
+    line-height: 40px;
+    font-size : 20px;
+    width:100px;
+    text-align:center;
+}
+
+div.navigation-bar ul li a{
+    text-decoration: none;
+    color : white;
+    display:block;
+}
+
+div.navigation-bar ul li a:hover{
+    color:red;
+    background-color:#fff;
+}
+
+div.navigation-bar ul li ul{
+    display:none;
+}
+
+div.navigation-bar ul li:hover ul{
+    display:block;
+}
+
+
+/* -----  Example One ----- */
+
+div.example-one{
+    padding:50px;
+}
+
+div.example-one div.example-one-container{
+    background-color : #fff;
+    padding: 20px;
+    width:400px; 
+    box-sizing:border-box;
+    margin:0 auto;
+    border-radius : 5px;
+}
+
+div.example-one div.example-one-container h4{
+    margin-top:0;
+}
+
+div.example-one div.example-one-container div.row{
+    margin-bottom:10px;
+    display: flex;
+}
+
+div.example-one div.example-one-container div.row label{
+    margin-right: 5px;
+}
+
+div.example-one div.example-one-container div.row input{
+    flex:1;
+}
+
+div.example-two div.container,div.example-three div.container{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+div.example-two div.container div.three-col-layout{
+    display:flex;
+    justify-content: space-between;
+}
+
+div.example-two div.container div.three-col-layout div.main-column{
+    flex-basis: 50%;
+    order:2;
+}
+
+div.example-two div.container div.three-col-layout div.side-col-one{
+    flex-basis: 20%;
+    order:1;
+}
+
+div.example-two div.container div.three-col-layout div.side-col-two{
+    flex-basis: 20%;
+    order:3;
+}
+
+div.example-three div.container div.three-col-layout-margin{
+    display:flex;
+    justify-content: space-between;
+}
+
+div.example-three div.container div.three-col-layout-margin div.feature{
+    padding:10px;
+    border-radius:2px;
+    flex-basis: 30%;
+}
+
+div.example-three div.container div.three-col-layout-margin div.feature h5{
+    margin-top: 0;
+}
+
+div.example-three div.container div.three-col-layout-margin div.feature-one{
+    background-color: #567478
+}
+
+div.example-three div.container div.three-col-layout-margin div.feature-two{
+    background-color: #564839
+}
+
+div.example-three div.container div.three-col-layout-margin div.feature-three{
+    background-color: #364859
+}
