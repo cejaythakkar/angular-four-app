@@ -15,6 +15,18 @@ export class UserListComponent implements OnInit {
 
   }
 
+ public onAdd(name : string):void{
+    name = name.trim();
+    if(!name)
+      return;
+    this.userService.addUser({name} as USER).subscribe(user => this.uiTeamMembers.push(user));
+  }
+
+  public delete(user : USER):void{
+    this.userService.deleteUser(user).subscribe();
+    this.uiTeamMembers = this.uiTeamMembers.filter(u => u !== user);
+  }
+
   private getUsers():void{
     let self = this;
     this.userService.getUsers().subscribe(function(users){

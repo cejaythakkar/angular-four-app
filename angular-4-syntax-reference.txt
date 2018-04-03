@@ -35,5 +35,84 @@
 	    }
 	}
 
-2) how to pass value from one component to other
+****** Attribute, class, and style bindings
+
+Attribute binding
+You can set the value of an attribute directly with an attribute binding.
+
+You must use attribute binding when there is no element property to bind.
+
+Consider the ARIA, SVG, and table span attributes. They are pure attributes.
+They do not correspond to element properties, and they do not set element properties.
+There are no property targets to bind to.
+
+This fact becomes painfully obvious when you write something like this.
+
+<tr><td colspan="{{1 + 1}}">Three-Four</td></tr>
+And you get this error:
+Template parse errors:
+Can't bind to 'colspan' since it isn't a known native property
+
+As the message says, the <td> element does not have a colspan property. It has the "colspan" attribute,
+but interpolation and property binding can set only properties, not attributes.
+
+Attribute binding syntax resembles property binding. Instead of an element property between brackets,
+start with the prefix attr, followed by a dot (.) and the name of the attribute.
+You then set the attribute value, using an expression that resolves to a string.
+
+Bind [attr.colspan] to a calculated value:
+
+<table border=1>
+  <!--  expression calculates colspan=2 -->
+  <tr><td [attr.colspan]="1 + 1">One-Two</td></tr>
+
+  <!-- ERROR: There is no `colspan` property to set!
+    <tr><td colspan="{{1 + 1}}">Three-Four</td></tr>
+  -->
+
+  <tr><td>Five</td><td>Six</td></tr>
+</table>
+
+******Class binding
+
+You can add and remove CSS class names from an element's class attribute with a class binding.
+
+Class binding syntax resembles property binding. Instead of an element property between brackets, start with the prefix class,
+ optionally followed by a dot (.) and the name of a CSS class: [class.class-name].
+
+ <!-- standard class attribute setting  -->
+<div class="bad curly special">Bad curly special</div>
+
+You can replace that with a binding to a string of the desired class names; this is an all-or-nothing, replacement binding.
+
+<!-- reset/override all class names with a binding  -->
+<div class="bad curly special"
+     [class]="badCurly">Bad curly</div>
+
+Finally, you can bind to a specific class name.
+ Angular adds the class when the template expression evaluates to truthy.
+ It removes the class when the expression is falsy.
+
+ <!-- toggle the "special" class on/off with a property -->
+<div [class.special]="isSpecial">The class binding is special</div>
+
+<!-- binding to `class.special` trumps the class attribute -->
+<div class="special"
+     [class.special]="!isSpecial">This one is not so special</div>
+
+******Style binding
+You can set inline styles with a style binding.
+
+Style binding syntax resembles property binding. Instead of an element property between brackets,
+start with the prefix style,
+followed by a dot (.) and the name of a CSS style property: [style.style-property].
+
+<button [style.color]="isSpecial ? 'red': 'green'">Red</button>
+<button [style.background-color]="canSave ? 'cyan': 'grey'" >Save</button>
+
+Some style binding styles have a unit extension.
+The following example conditionally sets the font size in “em” and “%” units .
+
+<button [style.font-size.em]="isSpecial ? 3 : 1" >Big</button>
+<button [style.font-size.%]="!isSpecial ? 150 : 50" >Small</button>
 

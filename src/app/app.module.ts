@@ -18,6 +18,7 @@ import { MessageService } from './message.service';
 import { AppRoutingModule } from './/app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TypescriptTestComponent } from './typescript-test/typescript-test.component';
+import { UserSearchComponent } from './user-search/user-search.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { TypescriptTestComponent } from './typescript-test/typescript-test.compo
     UserDetailComponent,
     MessagesComponent,
     DashboardComponent,
-    TypescriptTestComponent
+    TypescriptTestComponent,
+    UserSearchComponent
   ],
   imports: [
     BrowserModule,

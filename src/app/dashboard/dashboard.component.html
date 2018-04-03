@@ -1,8 +1,9 @@
 <h2>Top Users</h2>
 <div>
   <ul>
-    <li *ngFor="let user of users" routerLink="/detail/{{user.id}}">
+    <li *ngFor="let user of users" routerLink="/users/{{user.id}}">
       <h4 >{{user.name}}</h4>
     </li>
   </ul>
 </div>
+<app-user-search></app-user-search>

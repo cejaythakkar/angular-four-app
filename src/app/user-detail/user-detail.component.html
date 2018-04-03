@@ -9,8 +9,9 @@
     </div>
     <div>
       <label>name:</label>
-      <input type="text" [value]="selectedUser.name" />
+      <input type="text" [(ngModel)]="selectedUser.name" />
     </div>
   </div>
+  <button (click)="onSave()">save</button>
   <button (click)="goBack()">Back</button>
 </div>

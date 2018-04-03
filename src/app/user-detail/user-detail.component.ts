@@ -23,6 +23,18 @@ export class UserDetailComponent implements OnInit {
   goBack():void{
     this.location.back();
   }
+
+  public onAdd(name : string):void{
+    name = name.trim();
+    if(!name)
+      return;
+    this.userService.addUser({name} as USER).subscribe();
+  }
+
+   public onSave():void{
+      this.userService.updateUser(this.selectedUser).subscribe(() => this.goBack())
+    }
+
   getUser():void{
     const id = parseInt(this.activatedRoute.snapshot.paramMap.get('id'));
     this.userService.getUser(id).subscribe(user => this.selectedUser = user);
