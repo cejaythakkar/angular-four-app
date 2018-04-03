@@ -35,6 +35,13 @@
 	    }
 	}
 
+******Property binding ( [property] )
+
+
+Write a template property binding to set a property of a view element. The binding sets the property to the value of a template expression.
+
+The most common property binding sets an element property to a component property value. An example is binding the src property of an image element to a component's heroImageUrl property:
+
 ****** Attribute, class, and style bindings
 
 Attribute binding
