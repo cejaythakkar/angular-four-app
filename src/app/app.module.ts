@@ -20,6 +20,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { TypescriptTestComponent } from './typescript-test/typescript-test.component';
 import { DisplayDataComponent } from './display-data/display-data.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { UserSearchComponent } from './user-search/user-search.component';
 
 
 @NgModule({
@@ -34,7 +35,9 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
     MessagesComponent,
     DashboardComponent,
     TypescriptTestComponent,
-    DisplayDataComponent
+    DisplayDataComponent,
+    UserSearchComponent
+
   ],
   imports: [
     BrowserModule,

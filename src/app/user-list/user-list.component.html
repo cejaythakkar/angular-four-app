@@ -1,9 +1,15 @@
 <h2>Example of working with an Array in Angular</h2>
+<div class="addUser">
+  <label>User Name :- </label>
+  <input type="text" #username>
+  <button (click)="onAdd(username.value); username.value=''">add</button>
+<div>
 <div class="user-list">
   <div><div><span>UI team</span></div>
     <ul>
-      <li *ngFor="let uiMember of uiTeamMembers" routerLink="/detail/{{uiMember.id}}"><span>{{uiMember.name}}</span>
-        <app-user-item [user]="uiMember"></app-user-item>
+      <li *ngFor="let uiMember of uiTeamMembers" routerLink="/users/{{uiMember.id}}">
+        <span>{{uiMember.name}}</span>
+        <button (click)="delete(uiMember)">X</button>
       </li>
     </ul>
   </div>
