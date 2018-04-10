@@ -37,3 +37,58 @@
 
 2) how to pass value from one component to other
 
+------------------------------------------------------------
+template expression
+
+the text between the braces is a template expression that Angular first evaluates and then converts to a string. The following interpolation illustrates the point by adding the two numbers:
+
+<p>The sum of 1 + 1 is {{1 + 1}}</p>
+
+The expression can invoke methods of the host component such as getVal(), seen here:
+
+<p>The sum of 1 + 1 is not {{1 + 1 + getVal()}}</p>
+
+[property]="expression".
+
+JavaScript expressions that have or promote side effects are prohibited, including:
+
+assignments (=, +=, -=, ...)
+new
+chaining expressions with ; or ,
+increment and decrement operators (++ and --)
+Other notable differences from JavaScript syntax include:
+
+no support for the bitwise operators | and &
+new template expression operators, such as |, ?. and !
+
+
+expression context
+
+template's context such as a template input variable (let hero) or a template reference variable (#heroInput).
+
+
+Template statements
+
+A template statement responds to an event raised by a binding target such as an element, component, or directive. You'll see template statements in the event binding section, appearing in quotes to the right of the = symbol as in (event)="statement".
+
+<button (click)="deleteHero()">Delete hero</button>
+
+Like template expressions, template statements use a language that looks like JavaScript. The template statement parser differs from the template expression parser and specifically supports both basic assignment (=) and chaining expressions (with ; or ,).
+
+However, certain JavaScript syntax is not allowed:
+
+new
+increment and decrement operators, ++ and --
+operator assignment, such as += and -=
+the bitwise operators | and &
+the template expression operators
+
+
+Statement context
+The statement context may also refer to properties of the template's own context. In the following examples, the template $event object, a template input variable (let hero), and a template reference variable (#heroForm) are passed to an event handling method of the component.
+
+<button (click)="onSave($event)">Save</button>
+<button *ngFor="let hero of heroes" (click)="deleteHero(hero)">{{hero.name}}</button>
+<form #heroForm (ngSubmit)="onSubmit(heroForm)"> ... </form>
+
+Template statements cannot refer to anything in the global namespace. They can't refer to window or document. They can't call console.log or Math.max

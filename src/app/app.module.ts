@@ -18,6 +18,8 @@ import { MessageService } from './message.service';
 import { AppRoutingModule } from './/app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TypescriptTestComponent } from './typescript-test/typescript-test.component';
+import { DisplayDataComponent } from './display-data/display-data.component';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 
 @NgModule({
@@ -31,14 +33,16 @@ import { TypescriptTestComponent } from './typescript-test/typescript-test.compo
     UserDetailComponent,
     MessagesComponent,
     DashboardComponent,
-    TypescriptTestComponent
+    TypescriptTestComponent,
+    DisplayDataComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService,{dataEncapsulation : false})
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService,{dataEncapsulation : false}),
+    BsDropdownModule.forRoot()
   ],
   providers: [
     UserService,
