@@ -1,63 +1,133 @@
 <!--<app-hello-world></app-hello-world>-->
-<nav>
-  <a routerLink="/userlist">Users</a>
-  <a routerLink="/dashboard">Dashboard</a>
-</nav>
-<router-outlet></router-outlet>
-<app-messages></app-messages>
-<app-display-data></app-display-data>
-<app-typescript-test></app-typescript-test>
-<table border=1>
-  <!--  expression calculates colspan=2 -->
-  <tr><td [attr.colspan]="1 + 1">One-Two</td></tr>
+<div id="main-container">
+  <div id="body-wrapper">
+    <div id="wrap">
+      <app-header></app-header>
+      <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand"
+     [routerLink]="['']">Jt's Demo
+  </a>
+  <ul class="nav navbar-nav">
+      <li class="nav-item"
+        [routerLinkActive]="['active']">
+      <a class="nav-link"
+        [routerLink]="['home']">Home
+      </a>
+      <a class="nav-link" routerLink="/userlist">Users</a>
+    </li>
+    <li class="nav-item"
+      [routerLinkActive]="['active']">
+    <a class="nav-link"
+      [routerLink]="['home']">Home
+    </a>
+    <a class="nav-link" routerLink="/dashboard">Dashboard</a>
+  </li>
+    <li class="nav-item"
+        [routerLinkActive]="['active']">
+      <a class="nav-link"
+         [routerLink]="['home']">Home
+      </a>
+    </li>
+    <li class="nav-item"
+        [routerLinkActive]="['active']">
+      <a class="nav-link"
+         [routerLink]="['search']">Search
+      </a>
+    </li>
+  </ul>
+</nav> -->
+      <router-outlet></router-outlet>
 
-  <!-- ERROR: There is no `colspan` property to set!
+      <app-display-data></app-display-data>
+      <app-typescript-test></app-typescript-test>
+      <table border=1>
+        <!--  expression calculates colspan=2 -->
+        <tr>
+          <td [attr.colspan]="1 + 1">One-Two</td>
+        </tr>
+
+        <!-- ERROR: There is no `colspan` property to set!
     <tr><td colspan="{{1 + 1}}">Three-Four</td></tr>
   -->
 
-  <tr><td>Five</td><td>Six</td></tr>
-</table>
-<div class="bad curly special">Bad curly special</div>
+        <tr>
+          <td>Five</td>
+          <td>Six</td>
+        </tr>
+      </table>
+      <div class="bad curly special">Bad curly special</div>
 
-<!-- reset/override all class names with a binding  -->
-<div class="bad curly special"
-     [class]="badCurly">Bad curly</div>
+      <!-- reset/override all class names with a binding  -->
+      <div class="bad curly special" [class]="badCurly">Bad curly</div>
 
-<!-- toggle the "special" class on/off with a property -->
-<div [class.special]="isSpecial">The class binding is special</div>
+      <!-- toggle the "special" class on/off with a property -->
+      <div [class.special]="isSpecial">The class binding is special</div>
 
-<!-- binding to `class.special` trumps the class attribute -->
-<div class="special"
-     [class.special]="!isSpecial">This one is not so special</div>
-<form>
-  <h3>Add a Link</h3>
-  <div><label for="title">title : </label><input type="text" name="title" #newTitle></div>
-  <div><label for="link">link : </label><input type="text" name="link" #newLink></div>
-  <div><button type="button" (click)="addALink(newTitle,newLink)">submit link</button></div>
-</form>
-<h1>list of articles</h1>
+      <!-- binding to `class.special` trumps the class attribute -->
+      <div class="special" [class.special]="!isSpecial">This one is not so special</div>
+      <form>
+        <h3>Add a Link</h3>
+        <div>
+          <label for="title">title : </label>
+          <input type="text" name="title" #newTitle>
+        </div>
+        <div>
+          <label for="link">link : </label>
+          <input type="text" name="link" #newLink>
+        </div>
+        <div>
+          <button type="button" (click)="addALink(newTitle,newLink)">submit link</button>
+        </div>
+      </form>
+      <h1>list of articles</h1>
 
-<app-article *ngFor="let article of articles" [newArticle]="article"></app-article>
+      <app-article *ngFor="let article of articles" [newArticle]="article"></app-article>
 
-<h1>Product Listing</h1>
-<app-product-list></app-product-list>
+      <h1>Product Listing</h1>
+      <app-product-list></app-product-list>
 
-<ul class="nav navbar-nav">
-  <li class="active"><a href="#">
-    Link <span class="sr-only">(current)</span>
-  </a></li>
-  <li><a href="#">Link</a></li>
-  <li class="dropdown" dropdown> <!-- {1} -->
-      <a dropdownToggle role="button"> <!-- {2} -->
-        Dropdown <span class="caret"></span></a>
-      <ul *dropdownMenu class="dropdown-menu"> <!-- {3} -->
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li role="separator" class="divider"></li>
-          <li><a href="#">Separated link</a></li>
-          <li role="separator" class="divider"></li>
-          <li><a href="#">One more separated link</a></li>
+      <ul class="nav navbar-nav">
+        <li class="active">
+          <a href="#">
+            Link
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">Link</a>
+        </li>
+        <li class="dropdown" dropdown>
+          <!-- {1} -->
+          <a dropdownToggle role="button">
+            <!-- {2} -->
+            Dropdown
+            <span class="caret"></span>
+          </a>
+          <ul *dropdownMenu class="dropdown-menu">
+            <!-- {3} -->
+            <li>
+              <a href="#">Action</a>
+            </li>
+            <li>
+              <a href="#">Another action</a>
+            </li>
+            <li>
+              <a href="#">Something else here</a>
+            </li>
+            <li role="separator" class="divider"></li>
+            <li>
+              <a href="#">Separated link</a>
+            </li>
+            <li role="separator" class="divider"></li>
+            <li>
+              <a href="#">One more separated link</a>
+            </li>
+          </ul>
+        </li>
       </ul>
-  </li>
-</ul>
+    </div>
+  </div>
+  <div id="console-wrapper">
+    <app-messages></app-messages>
+  </div>
+</div>

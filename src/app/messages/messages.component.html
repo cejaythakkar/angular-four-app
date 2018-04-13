@@ -1,8 +1,10 @@
-<div class="message-container" *ngIf="messageService.messages.length">
-  <div class="messages">
-    <p>MESSAGES-----</p>
-    <ul>
-      <li *ngFor="let message of messageService.messages">{{message}}</li>
+<div class="message-container card" *ngIf="messageService.messages.length">
+  <div class="console-header card-header">
+    <span>Console</span>
+  </div>
+  <div class="messages console-body card-body">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let message of messageService.messages">{{message}}</li>
     </ul>
   </div>
   <div>

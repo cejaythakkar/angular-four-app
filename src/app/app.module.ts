@@ -21,6 +21,10 @@ import { TypescriptTestComponent } from './typescript-test/typescript-test.compo
 import { DisplayDataComponent } from './display-data/display-data.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { UserSearchComponent } from './user-search/user-search.component';
+import { HeaderComponent } from './header/header.component';
+import { AngulardemosComponent } from './angulardemos/angulardemos.component';
+import { AngularexamplesComponent } from './angularexamples/angularexamples.component';
+import { CssexamplesComponent } from './cssexamples/cssexamples.component';
 
 
 @NgModule({
@@ -36,7 +40,11 @@ import { UserSearchComponent } from './user-search/user-search.component';
     DashboardComponent,
     TypescriptTestComponent,
     DisplayDataComponent,
-    UserSearchComponent
+    UserSearchComponent,
+    HeaderComponent,
+    AngulardemosComponent,
+    AngularexamplesComponent,
+    CssexamplesComponent
 
   ],
   imports: [
