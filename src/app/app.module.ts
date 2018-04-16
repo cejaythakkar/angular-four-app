@@ -25,6 +25,7 @@ import { HeaderComponent } from './header/header.component';
 import { AngulardemosComponent } from './angulardemos/angulardemos.component';
 import { AngularexamplesComponent } from './angularexamples/angularexamples.component';
 import { CssexamplesComponent } from './cssexamples/cssexamples.component';
+import { MarketplacedesignComponent } from './marketplacedesign/marketplacedesign.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { CssexamplesComponent } from './cssexamples/cssexamples.component';
     HeaderComponent,
     AngulardemosComponent,
     AngularexamplesComponent,
-    CssexamplesComponent
+    CssexamplesComponent,
+    MarketplacedesignComponent
 
   ],
   imports: [

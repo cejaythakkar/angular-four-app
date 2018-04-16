@@ -6,6 +6,7 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
 import { AngulardemosComponent } from './angulardemos/angulardemos.component';
 import { AngularexamplesComponent } from './angularexamples/angularexamples.component';
 import { CssexamplesComponent } from './cssexamples/cssexamples.component';
+import { MarketplacedesignComponent} from './marketplacedesign/marketplacedesign.component'
 
 const routes : Routes = [
   {
@@ -36,6 +37,10 @@ const routes : Routes = [
   {
     path:'css',
     component : CssexamplesComponent
+  },
+  {
+    path:'marketplacedesign',
+    component : MarketplacedesignComponent
   }
 ];
 @NgModule({
