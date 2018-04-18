@@ -1,4 +1,7 @@
 <div class="marketplace-body" id="bodyPart">
+  <div class="fullwidth-box-top clearfix marketplace-header bg-secondary text-white">
+    <h2>Vendors (showing 1-15 of 127)</h2>
+  </div>
   <div class="marketplace-main">
     <section class="nav-panel sidebar-nav left">
       <div class="nav-panel-body left-nav-blocks">
@@ -24,9 +27,7 @@
       </div>
     </section>
     <section class="left-panel">
-      <div class="fullwidth-box-top clearfix">
-        <h2>Vendors (showing 1-15 of 127)</h2>
-      </div>
+
       <div class="left-panel-body">
         <div class="left-panel-categories">
           <div class="fullwidth-box-top clearfix">
@@ -36,7 +37,7 @@
 
             <div class="top-content">
               <a class="search-btn" href="javascript:void(0)" title="Search...">
-                <i class="fa fa-search">X</i>
+                <i class="fa fa-search"></i>
               </a>
               <!-- <div class="search-container">
                   <a class="close-search" href="javascript:void(0)">
@@ -85,7 +86,7 @@
           <div class="region-body">
             <div class="top-content">
               <a class="search-btn" href="javascript:void(0)" title="Search...">
-                <i class="fa fa-search">X</i>
+                <i class="fa fa-search"></i>
               </a>
               <!-- <div class="search-container">
                   <a class="close-search" href="javascript:void(0)">
@@ -131,7 +132,160 @@
       </div>
     </section>
     <section class="main-panel">
+      <div class="main-panel-container">
+        <div class="fullwidth-box-top add-minwidth clearfix main-panel-header">
+          <div class="top-content main-panel-search">
+            <a class="search-btn" href="javascript:void(0)" title="Search...">
+              <i class="fa fa-search"></i>
+            </a>
+            <!-- <div class="search-container">
+                    <a class="close-search" href="javascript:void(0)">
+                      <i class="fa fa-close"></i>
+                    </a>
+                    <div>
+                      <input type="text" placeholder="Search..." class="ng-untouched ng-pristine ng-valid">
+                    </div>
+                  </div> -->
+            <h6 title="Search...">Search Categories</h6>
+          </div>
+          <div class="float-right sortable btn-group" dropdown>
+            <div class="sort-wrapper">
+              <a><i class="fa fa-sort-alpha-asc" aria-hidden="true"></i> Sort Alphabetically <i class="fa fa-sort" aria-hidden="true"></i></a>
+            </div>  
+            
+            <button class="btn btn-default header-items settings-btn" dropdownToggle title="Settings">
+              <i class="fa fa-cog"></i>
+            </button>
+            <div *dropdownMenu class="manage-toolbar-header dropdown-menu settings-dropdownmenu" style="padding: 5px 10px;">
+              <div class="settings-menu-item">
+                <span class="showLabel adoddle-show-label">Show</span>
+                <select id="optshow" class="btn btn-default border border-secondary">
+                  <option value="10">10</option>
+                  <option value="25">25</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                  <option selected="selected" value="250">250</option>
+                </select>
+              </div>
+              <div class="settings-menu-item">
+                <a id="customize-dropdown" class="btn btn-default dropdown-toggle btn-outline customize-dropdown border border-secondary" data-toggle="dropdown" href="javascript:void(0)"
+                  title="Customise">Customise
+                  <span class="caret"></span>
+                </a>
+                <div class="dropdown-menu adoddle-dropdown dropdown-menu-right" onclick="return false;">
+                  <div class="myColumns">
+                    <span>My Columns</span>
+                  </div>
+                  <div class="configurationWrapper">
+                    <div class="available">
+                      <span class="listboxHeaderSpan">Available Fields</span>
+                      <br>
+                      <select class="listbox" multiple="multiple" name="sometext">
+                        <option value="13" col-width="125" title="Apps">Apps</option>
+                        <option value="19" col-width="125" title="Created Date">Created Date</option>
+                        <option value="16" col-width="125" title="Description">Description</option>
+                        <option value="12" col-width="125" title="Files">Files</option>
+                        <option value="14" col-width="125" title="Last File Uploaded">Last File Uploaded</option>
+                        <option value="15" col-width="125" title="Last Form Activity">Last Form Activity</option>
+                        <option value="18" col-width="125" title="Tags">Tags</option>
+                        <option value="11" col-width="125" title="Users">Users</option>
+                      </select>
+                    </div>
+                    <div class="moveContainer">
+                      <div>
+                        <div id="moveToSelectedItem" title="Add" data-container="[object Object]" class="arrowBox">
+                          <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </div>
+                      </div>
+                      <div style="margin-top:10px;">
+                        <div id="moveToAvailableItem" title="Remove" data-container="[object Object]" class="arrowBox">
+                          <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="selectedField">
+                      <span class="listboxHeaderSpan">Selected Fields</span>
+                      <br>
+                      <select class="listbox" multiple="multiple" name="sometext">
+                        <option disabled="true" value="0" col-width="31" title="Check Box">Check Box</option>
+                        <option value="17" col-width="25" title="Favourite">Favourite</option>
+                        <option value="1" col-width="125" title="Name">Name</option>
+                        <option value="4" col-width="125" title="Geography ">Geography </option>
+                        <option value="3" col-width="50" title="Type">Type</option>
+                        <option value="5" col-width="125" title="Cloned From">Cloned From</option>
+                        <option value="6" col-width="125" title="Status">Status</option>
+                        <option value="8" col-width="125" title="End Date">End Date</option>
+                        <option value="9" col-width="125" title="Project Managers">Project Managers</option>
+                        <option value="7" col-width="125" title="Start Date">Start Date</option>
+                        <option value="2" col-width="174" title="Owner Org">Owner Org</option>
+                        <option value="10" col-width="125" title="Administrators">Administrators</option>
+                      </select>
+                    </div>
+                    <div class="updownContainer">
+                      <div>
+                        <div id="moveUp" title="Up" data-container="[object Object]" class="arrowBox">
+                          <i class="fa fa-angle-up" aria-hidden="true"></i>
+                        </div>
+                      </div>
+                      <div style="margin-top:10px;">
+                        <div id="moveDown" title="Down" data-container="[object Object]" class="arrowBox">
+                          <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="saveCancel">
+                      <div style="float:left;">
+                        <input type="button" id="Save" data-container="[object Object]" class="btn-mini btn-danger" value="Save">
+                      </div>
+                      <div style="float:left;">
+                        <input type="button" id="Cancel" value="Cancel" class="btn-mini btn-inverse">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="settings-menu-item settings-last-item">
+                <a href="javascript:void(0);" class="switch-view view-list active" style="display: inline;" title="List View">
+                  <i class="fa fa-list" aria-hidden="true"></i>
+                </a>
+                <a href="javascript:void(0);" contentid="project-blocks" class="switch-view view-grid" style="display: inline;"
+                  title="Thumb View">
+                  <i class="fa fa-th" aria-hidden="true"></i>
+                </a>
+                <a href="javascript:void(0)" class="restored resize-view" data-id="listingMaximize" style="margin-right: 5px;"
+                  title="Maximize">
+                  <i class="fa fa-window-maximize" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-panel-body">
+          
+        </div>
+        <div class="clearfix"></div>
+        <div class="tab-listing-footer">
+          <div class="pagination pagination-small" id="divPaging">
+            <ul>
+              <li title="Previous page" data-page="1" class="input-disabled">
+                <a href="javascript:void(0)">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li title="Page 1" data-page="1" class="input-disabled active">
+                <a href="javascript:void(0)">1</a>
+              </li>
+              <li title="Next page" data-page="1" class="input-disabled">
+                <a href="javascript:void(0)">
+                  <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div id="projectRecCounter" class="listing-records-details">(Showing 1 - 1 of 1)</div>
+        </div>
 
+      </div>
     </section>
   </div>
 </div>

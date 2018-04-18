@@ -2,7 +2,11 @@ div.console-body.card-body{
     padding: 0;
     overflow-y: scroll;
     overflow-x: hidden;
+    
 }
 div.message-container.card{
     height:100%;
+}
+#optshow{
+    padding: 0px 10px;
 }
