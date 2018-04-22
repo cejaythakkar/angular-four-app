@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
@@ -26,6 +27,8 @@ import { AngulardemosComponent } from './angulardemos/angulardemos.component';
 import { AngularexamplesComponent } from './angularexamples/angularexamples.component';
 import { CssexamplesComponent } from './cssexamples/cssexamples.component';
 import { MarketplacedesignComponent } from './marketplacedesign/marketplacedesign.component';
+import { SchoolComponent } from './school/school.component';
+import { DataService } from './common/data.service';
 
 
 @NgModule({
@@ -46,7 +49,8 @@ import { MarketplacedesignComponent } from './marketplacedesign/marketplacedesig
     AngulardemosComponent,
     AngularexamplesComponent,
     CssexamplesComponent,
-    MarketplacedesignComponent
+    MarketplacedesignComponent,
+    SchoolComponent
 
   ],
   imports: [
@@ -54,12 +58,14 @@ import { MarketplacedesignComponent } from './marketplacedesign/marketplacedesig
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    HttpModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService,{dataEncapsulation : false}),
     BsDropdownModule.forRoot()
   ],
   providers: [
     UserService,
-    MessageService
+    MessageService,
+    DataService
   ],
   bootstrap: [AppComponent]
 })

@@ -18,7 +18,11 @@ export class UserSearchComponent implements OnInit {
   public users$: Observable<USER[]>;
   private searchTerms = new Subject<string>();
 
-  constructor(private userService : UserService) { }
+  private anObservable$ = new Observable(observer => {
+    
+  });
+
+  constructor(private userService: UserService) { }
 
   public search(term: string): void {
     this.searchTerms.next(term);

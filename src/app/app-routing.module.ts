@@ -6,7 +6,8 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
 import { AngulardemosComponent } from './angulardemos/angulardemos.component';
 import { AngularexamplesComponent } from './angularexamples/angularexamples.component';
 import { CssexamplesComponent } from './cssexamples/cssexamples.component';
-import { MarketplacedesignComponent} from './marketplacedesign/marketplacedesign.component'
+import { MarketplacedesignComponent} from './marketplacedesign/marketplacedesign.component';
+import { SchoolComponent } from './school/school.component';
 
 const routes : Routes = [
   {
@@ -28,11 +29,14 @@ const routes : Routes = [
   },
   {
     path:'angular/angulardemos',
-    component : AngulardemosComponent
+    component : AngulardemosComponent,
+    children:[
+      {path : 'schoolapp',component : SchoolComponent}
+    ]
   },
   {
     path:'angular/angularexamples',
-    component : AngularexamplesComponent
+    component : AngularexamplesComponent,
   },
   {
     path:'css',
