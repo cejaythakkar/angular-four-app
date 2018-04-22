@@ -8,6 +8,7 @@ import { AngularexamplesComponent } from './angularexamples/angularexamples.comp
 import { CssexamplesComponent } from './cssexamples/cssexamples.component';
 import { MarketplacedesignComponent} from './marketplacedesign/marketplacedesign.component';
 import { SchoolComponent } from './school/school.component';
+import { ChatappComponent } from './chatapp/chatapp.component';
 
 const routes : Routes = [
   {
@@ -31,7 +32,10 @@ const routes : Routes = [
     path:'angular/angulardemos',
     component : AngulardemosComponent,
     children:[
-      {path : 'schoolapp',component : SchoolComponent}
+      {path : 'schoolapp',component : SchoolComponent},
+      {path : 'chatapp',component : ChatappComponent }
+      /* {path : 'schoolapp',component : SchoolComponent},
+      {path : 'schoolapp',component : SchoolComponent}             */
     ]
   },
   {

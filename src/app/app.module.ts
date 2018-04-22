@@ -29,6 +29,10 @@ import { CssexamplesComponent } from './cssexamples/cssexamples.component';
 import { MarketplacedesignComponent } from './marketplacedesign/marketplacedesign.component';
 import { SchoolComponent } from './school/school.component';
 import { DataService } from './common/data.service';
+import { DocumentsComponent } from './documents/documents.component';
+import { ChatappComponent } from './chatapp/chatapp.component';
+import { DynamicformsComponent } from './dynamicforms/dynamicforms.component';
+import { BlogComponent } from './blog/blog.component';
 
 
 @NgModule({
@@ -50,7 +54,11 @@ import { DataService } from './common/data.service';
     AngularexamplesComponent,
     CssexamplesComponent,
     MarketplacedesignComponent,
-    SchoolComponent
+    SchoolComponent,
+    DocumentsComponent,
+    ChatappComponent,
+    DynamicformsComponent,
+    BlogComponent
 
   ],
   imports: [
