@@ -1,3 +1,17 @@
-<p>
-  chatapp works!
-</p>
+<div class="wrapper">
+  <div class="header">
+    <h1>Simple Chat app using websocket api and nodejs</h1>
+  </div>
+  <div class="body-wrapper">
+    <div class="body">
+      <div class="message-area" #msgarea>
+        
+      </div>
+      <div class="message-area">
+        <input type="text" class="type-msg" [(ngModel)]="typMsg">
+        <button class="send-msg-button" type="button" (click)="sendMessage()">send</button>
+      </div>
+    </div>
+  </div>
+</div>
+

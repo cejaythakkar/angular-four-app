@@ -3,7 +3,8 @@ var express = require('express'),
 	path = require('path'),
 	http = require('http'),
 	app = express(),
-	api = require('./server/routes/api');
+	api = require('./server/routes/api'),
+	webSocketServer = require('./server/websocketserver');
 // parsers
 
 app.use(bodyParser.json());
